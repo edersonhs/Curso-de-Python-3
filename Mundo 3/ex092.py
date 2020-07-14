@@ -25,7 +25,10 @@ if ctps != 0:
 print('=-' * 30)
 print(f"Seu nome é: {pessoa['nome']}.")
 print(f"Você tem {pessoa['idade']} anos.")
-print(f"Sua carteira de trabalho é: {pessoa['ctps']}.")
-print(f"Você foi contratado em {pessoa['contratação']}.")
-print(f"Seu sálario é: R${pessoa['salário']}.")
-print(f"Você se aposentará com {pessoa['aposentadoria']} anos.")
+if ctps != 0:
+    print(f"Sua carteira de trabalho é: {pessoa['ctps']}.")
+    print(f"Você foi contratado em {pessoa['contratação']}.")
+    print(f"Seu sálario é: R${pessoa['salário']}.")
+    print(f"Você se aposentará com {pessoa['aposentadoria']} anos.")
+else:
+    print('Você não possui Carteira de Trabalho.')
