@@ -43,11 +43,15 @@ for c, v in enumerate(pessoas):
 print('-=' * 30)
 print(f"O grupo tem {len(pessoas)} pessoas.")
 print(f"A médias de idade é de {idadeMediaGrupo} anos.")
-print("As mulheres cadastradas foram", end=' ')
-for mulher in mulheres:
-    print(mulher['nome'],end=' ')
-print('\nLista das pessoas que estão acima da média: ')
 
-for c, v in enumerate(idadeAcimaMedia):
-    print(f"\nNome = {idadeAcimaMedia[c]['nome']}; sexo = {idadeAcimaMedia[c]['sexo']}; idade = {idadeAcimaMedia[c]['idade']}")
+if len(mulheres) > 0:
+    print("As mulheres cadastradas foram", end=' ')
+    for mulher in mulheres:
+        print(mulher['nome'],end=' ')
+
+if len(idadeAcimaMedia) > 0:
+    print('\nLista das pessoas que estão acima da idade média: ')
+    for c, v in enumerate(idadeAcimaMedia):
+        print(
+            f"\nNome = {idadeAcimaMedia[c]['nome']}; sexo = {idadeAcimaMedia[c]['sexo']}; idade = {idadeAcimaMedia[c]['idade']}")
 print(f'{"<< ENCERRADO >>":^60}')
