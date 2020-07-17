@@ -20,6 +20,7 @@ while True:
         pessoa['sexo'] = str(input('Sexo: ')).strip().upper()[0]
         if pessoa['sexo'] in 'MF':
             break
+        print('OPÇÃO INVALIDA! Tente novamente. (S/N)')
     pessoa['idade'] = int(input('Idade: '))
     somaIdadeGrupo += pessoa['idade']
 
@@ -48,10 +49,14 @@ if len(mulheres) > 0:
     print("As mulheres cadastradas foram", end=' ')
     for mulher in mulheres:
         print(mulher['nome'],end=' ')
+else:
+    print('Não foram cadastradas mulheres.')
 
 if len(idadeAcimaMedia) > 0:
     print('\nLista das pessoas que estão acima da idade média: ')
     for c, v in enumerate(idadeAcimaMedia):
         print(
             f"\nNome = {idadeAcimaMedia[c]['nome']}; sexo = {idadeAcimaMedia[c]['sexo']}; idade = {idadeAcimaMedia[c]['idade']}")
+else:
+    print('Não existe uma idade média para o número de pessoas cadastrado.')
 print(f'{"<< ENCERRADO >>":^60}')
