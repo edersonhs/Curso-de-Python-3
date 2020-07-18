@@ -57,7 +57,7 @@ while True:
             break
         elif cod == 999:
             print('{:#^79}'.format(' << \033[0;31mEXECUÇÃO FINALIZADA\033[0;0;0m >> '))
-            break
+            exit()
         print('\033[0;31mERRO! Jogador não encontrado! Por favor insira um código valido.\033[0;0;0m')
     if cod == 999:
         break
