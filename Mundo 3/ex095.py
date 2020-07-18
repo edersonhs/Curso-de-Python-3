@@ -25,7 +25,7 @@ while True:
         temp += f'{c}' + ', '
         # Calculando total de gols
         total += c
-    gols = temp[0:len(gols)-2]
+    gols = temp[0:len(gols) - 2]
     jogador['gols'] = gols
     jogador['total'] = total
 
@@ -55,7 +55,12 @@ while True:
         cod = int(input('Mostrar dados de qual jogador? '))
         if cod <= len(jogadores) - 1:
             break
+        elif cod == 999:
+            print('{:#^79}'.format(' << \033[0;31mEXECUÇÃO FINALIZADA\033[0;0;0m >> '))
+            break
         print('\033[0;31mERRO! Jogador não encontrado! Por favor insira um código valido.\033[0;0;0m')
+    if cod == 999:
+        break
     print(f'    >> Estatísticas do jogador {jogadores[cod]["nome"]}:')
 
     temp = jogadores[cod]['gols'].replace(' ', '')  # Removendo os espaços
